@@ -2,6 +2,7 @@ package com.fmendez.mianimacion;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -127,5 +128,12 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void finish() {
+        setResult(300);
+        super.finish();
+        Log.i("app", "Finalizo dos");
     }
 }
